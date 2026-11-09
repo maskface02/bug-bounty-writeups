@@ -15,6 +15,7 @@ Each folder is one finding: the full story of how it was found, the technique be
 | # | Finding | Method | Outcome |
 |---|---------|--------|---------|
 | 1 | [The screenshot feature that called home: from a sign-up wizard to AWS metadata](ssrf-via-dns-rebind-on-scraper/writeup.md) | SSRF via DNS rebinding (TOCTOU) on a server-side screenshot scraper | Triaged P3 / Duplicate |
+| 2 | [One link, two clicks, full account: open OAuth client registration on an MCP server](mcp-oauth-dcr-account-takeover/writeup.md) | Unauthenticated Dynamic Client Registration (RFC 7591) → spoofed-name consent → no-secret token redemption → 263 MCP tools | Triaged Duplicate |
 
 *More coming as findings are cleared for disclosure.*
 

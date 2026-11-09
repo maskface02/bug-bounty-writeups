@@ -16,9 +16,9 @@ Each folder is one finding: the full story of how it was found, the technique be
 |---|---------|--------|---------|
 | 1 | [The screenshot feature that called home: from a sign-up wizard to AWS metadata](ssrf-via-dns-rebind-on-scraper/writeup.md) | SSRF via DNS rebinding (TOCTOU) on a server-side screenshot scraper | Triaged P3 / Duplicate |
 | 2 | [One link, two clicks, full account: open OAuth client registration on an MCP server](mcp-oauth-dcr-account-takeover/writeup.md) | Unauthenticated Dynamic Client Registration (RFC 7591) → spoofed-name consent → no-secret token redemption → 263 MCP tools | Triaged Duplicate |
-| 3 | [The free plan that never says no: 517 profiles on a 250-profile limit](f033-free-plan-profile-cap/writeup.md) | Plan-limit bypass: intake never enforces the cap, billing meter lags in snapshots, enforcement flag exists but is off | Triaged N/A, fresh-account repro 517/250 |
-| 4 | [XXE via spreadsheet upload: from file read to remote code execution](xxe-spreadsheet-upload-to-rce/writeup.md) | XML external entity via `lxml.etree.iterparse` bypassing `set_default_parser` → config file read → credential theft → database manager → RCE chain | Triaged Duplicate |
-| 5 | [The Policy Center behind a 404: a Personal User rewrote company policy, and the AI served it](expense-policy-authz-ai-amplifier/writeup.md) | Broken function-level authorization on expense-policy management; branch-exclusive activation + AI policy assistant as distribution channel | Triaged Duplicate |
+| 3 | [The free plan that never says no: 517 profiles on a 250-profile limit](free-plan-profile-cap/writeup.md) | Plan-limit bypass: intake never enforces the cap, billing meter lags in snapshots, enforcement flag exists but is off | First N/A → resubmission flagged Duplicate (Informational); repro 517/250 |
+| 4 | [XXE via spreadsheet upload: from local file read to database-manager access](xxe-spreadsheet-upload-to-rce/writeup.md) | XML external entity via `lxml.etree.iterparse` bypassing `set_default_parser` → config file read → database-manager credential → database creation (RCE not demonstrated) | Triaged Duplicate (Medium 5.3) |
+| 5 | [The Policy Center behind a 404: a Personal User rewrote company policy, and the AI served it](expense-policy-authz-ai-amplifier/writeup.md) | Broken function-level authorization on expense-policy management; branch-exclusive activation + AI policy assistant as distribution channel | Triaged Duplicate + €50 bonus (Low 3.8) |
 
 *More coming as findings are cleared for disclosure.*
 
